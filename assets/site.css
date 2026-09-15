@@ -1,0 +1,112 @@
+:root {
+  --paper: #fbf7f2;
+  --paper-2: #f3ece3;
+  --line: #e7ddd1;
+  --ink: #2a201c;
+  --ink-2: #5f534c;
+  --ink-3: #8d8078;
+  --accent: #b8543a;
+  --serif: "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 16px/1.75 var(--sans); padding-inline: 20px;
+  line-break: strict; text-wrap: pretty;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; }
+.narrow { max-width: 760px; }
+
+/* 顶栏 */
+.nav { display: flex; justify-content: space-between; align-items: center; padding-block: 22px; font-size: 14px; color: var(--ink-3); }
+.nav a { text-decoration: none; }
+.nav a:hover { color: var(--ink); }
+.nav .brand { font-family: var(--serif); font-size: 17px; color: var(--ink); letter-spacing: .08em; }
+
+/* 标题区 */
+.hero { padding-block: 48px 36px; }
+.eyebrow { font-size: 13px; letter-spacing: .22em; color: var(--accent); margin: 0 0 14px; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: .02em; margin: 0; }
+h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.25; }
+.lead { font-size: clamp(17px, 2vw, 19px); color: var(--ink-2); margin: 18px 0 0; max-width: 720px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 22px; font-size: 14px; color: var(--ink-3); }
+.meta b { color: var(--ink-2); font-weight: 500; }
+.note { font-size: 13px; color: var(--ink-3); margin-top: 10px; }
+
+/* 按钮 */
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border-radius: 999px; font-size: 14px; text-decoration: none; border: 1px solid var(--line); background: #fff; }
+.btn:hover { border-color: var(--ink-3); }
+.btn.solid { background: var(--ink); color: #fff; border-color: var(--ink); }
+.btn.solid:hover { background: #000; }
+
+/* 分节 */
+section.block { padding-block: 44px; border-top: 1px solid var(--line); }
+h2 { font-size: clamp(24px, 3vw, 30px); }
+.block > .wrap > p, .block p.body { color: var(--ink-2); max-width: 720px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 26px; }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 26px; }
+@media (max-width: 760px) { .two, .three { grid-template-columns: 1fr; } }
+
+/* 截图 */
+.shot { margin: 0; }
+.shot img { border-radius: 10px; border: 1px solid var(--line); background: #fff; box-shadow: 0 1px 2px rgba(42,32,28,.04), 0 12px 32px -18px rgba(42,32,28,.25); }
+.shot figcaption { font-size: 14px; color: var(--ink-3); margin-top: 10px; }
+.shot figcaption b { color: var(--ink); font-weight: 600; }
+.shot.wide { margin-top: 30px; }
+
+/* 手机截图 */
+.phones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 22px; margin-top: 30px; }
+@media (min-width: 900px) { .phones.six { grid-template-columns: repeat(6, 1fr); gap: 18px; } }
+@media (max-width: 560px) { .phones { grid-template-columns: repeat(2, 1fr); gap: 18px 14px; } }
+.phone img { border-radius: 22px; border: 6px solid #1f1a17; box-shadow: 0 16px 36px -20px rgba(42,32,28,.45); }
+.phone figcaption { font-size: 13px; text-align: center; }
+
+/* 流程条 */
+.flow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 22px; font-size: 14px; }
+.flow span { padding: 5px 12px; border-radius: 999px; background: var(--paper-2); color: var(--ink-2); }
+.flow i { font-style: normal; color: var(--ink-3); }
+
+/* 要点 */
+.points { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 16px; max-width: 760px; }
+.points li { padding-left: 18px; position: relative; color: var(--ink-2); }
+.points li::before { content: ""; position: absolute; left: 0; top: .72em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.points b { color: var(--ink); font-weight: 600; }
+
+/* 对比表 */
+.table-wrap { overflow-x: auto; margin-top: 24px; }
+table { border-collapse: collapse; min-width: 560px; width: 100%; font-size: 15px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 500; color: var(--ink-3); font-size: 13px; }
+td:first-child { color: var(--ink-3); white-space: nowrap; }
+
+/* 首页项目卡 */
+.cards { display: grid; gap: 28px; margin-top: 10px; padding-bottom: 40px; }
+.card { display: grid; grid-template-columns: 1.35fr 1fr; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; text-decoration: none; transition: border-color .15s, transform .15s; }
+.card:hover { border-color: var(--ink-3); transform: translateY(-2px); }
+.card .pic { background: var(--paper-2); display: flex; align-items: center; justify-content: center; padding: 26px; min-height: 280px; }
+.card .pic img { border-radius: 8px; box-shadow: 0 12px 30px -18px rgba(42,32,28,.4); }
+.card .pic.tall img { max-height: 320px; width: auto; border-radius: 16px; border: 5px solid #1f1a17; }
+.card .txt { padding: 30px 30px 28px; display: flex; flex-direction: column; }
+.card h2 { font-size: 26px; }
+.card p { color: var(--ink-2); margin: 12px 0 0; font-size: 15px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.tags span { font-size: 12px; padding: 3px 10px; border-radius: 999px; background: var(--paper-2); color: var(--ink-2); }
+.card .go { margin-top: auto; padding-top: 22px; font-size: 14px; color: var(--accent); }
+@media (max-width: 760px) { .card { grid-template-columns: 1fr; } .card .pic { min-height: 0; } }
+
+footer { padding-block: 36px 48px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-3); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--ink); }
+
+@media print {
+  body { padding-inline: 0; font-size: 12.5px; }
+  .nav, .actions, footer { display: none; }
+  section.block { break-inside: auto; padding-block: 24px; }
+  .shot, .phone, .card { break-inside: avoid; }
+  .card:hover { transform: none; }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>若途 · 结伴出行微信小程序 | 蒋洋作品集</title>
+<meta name="description" content="若途：结伴出行微信小程序。发布行程、申请加入别人的行程、把去过的地方沉淀成足迹。">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav"><a class="brand" href="../">蒋洋 · 作品集</a><a href="../zhipin/">← 上一个：智聘</a></nav>
+
+  <header class="hero">
+    <p class="eyebrow">PROJECT 02 · 微信小程序</p>
+    <h1>若途 · 结伴出行</h1>
+    <p class="lead">把「想去哪儿」和「和谁一起去」放进同一个界面：发布行程、浏览并申请加入别人的行程、把去过的地方沉淀成足迹。</p>
+    <div class="meta"><span><b>时间</b>　2026.04 – 至今</span><span><b>角色</b>　个人项目：原型设计与开发</span><span><b>技术</b>　原生微信小程序，无第三方框架</span></div>
+    <p class="note">开发中，尚未上线。截图来自微信开发者工具模拟器，数据为演示数据。</p>
+    <div class="actions">
+      <a class="btn solid" href="https://ayraayraayra.github.io/travel-together/prototype/v2-ai-generated.html" target="_blank" rel="noopener">在浏览器里体验 v2 原型 ↗</a>
+      <a class="btn" href="https://github.com/AYRAayraAYRA/travel-together" target="_blank" rel="noopener">查看源码 ↗</a>
+    </div>
+  </header>
+
+  <div class="phones six">
+    <figure class="shot phone"><img src="../assets/ruotu/01-home.jpg" alt="发现页"><figcaption>发现：足迹与周末短途</figcaption></figure>
+    <figure class="shot phone"><img src="../assets/ruotu/03-detail.jpg" alt="行程详情半屏卡"><figcaption>行程详情，可申请加入</figcaption></figure>
+    <figure class="shot phone"><img src="../assets/ruotu/04-create.jpg" alt="发布入口"><figcaption>发布：周末 / 长途</figcaption></figure>
+    <figure class="shot phone"><img src="../assets/ruotu/06-destination.jpg" alt="选择目的地与日期"><figcaption>先选目的地和日期</figcaption></figure>
+    <figure class="shot phone"><img src="../assets/ruotu/07-me.jpg" alt="我的页"><figcaption>我的：将要去的行程</figcaption></figure>
+    <figure class="shot phone"><img src="../assets/ruotu/08-arrived.jpg" alt="已抵达的足迹"><figcaption>可栖：已经抵达的地方</figcaption></figure>
+  </div>
+</div>
+
+<section class="block" style="margin-top:48px"><div class="wrap">
+  <h2>动工前，先做了两版原型</h2>
+  <p class="body">写小程序之前，先用单文件 HTML 做可点击原型，验证信息结构和交互。两版都保留了下来，因为第二版不是第一版的升级，而是换掉了一整条主流程。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th></th><th>v1 · 手动编排（2026.04.13）</th><th>v2 · 目的地驱动（2026.04.20）</th></tr></thead>
+    <tbody>
+      <tr><td>行程从哪来</td><td>用户填写标题、目的地、日期、人数、预算、描述，再逐天添加行程</td><td>选好目的地，行程标题、描述、预算和逐日安排先生成草稿，再修改</td></tr>
+      <tr><td>发现的问题</td><td>一次发布要填七八个字段还要逐天编排，填写负担太重，会劝退发布</td><td>—</td></tr>
+      <tr><td>首页与「我的」</td><td>行程平铺成一条列表</td><td>首页按国内 / 国外分区；「我的」拆成「将要去」和「已抵达」</td></tr>
+    </tbody>
+  </table></div>
+  <p class="body">正式小程序沿用了 v2 的结构：发现页按地域分组、「我的」页分为「若途（将要去）」和「可栖（已抵达）」、发布流程从目的地开始。v1 的手动编辑器没有带进来，但预算、人数上限、描述这些字段设计保留了。</p>
+  <div class="actions">
+    <a class="btn" href="https://ayraayraayra.github.io/travel-together/prototype/v1-manual-itinerary.html" target="_blank" rel="noopener">体验 v1 原型 ↗</a>
+    <a class="btn" href="https://ayraayraayra.github.io/travel-together/prototype/v2-ai-generated.html" target="_blank" rel="noopener">体验 v2 原型 ↗</a>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <h2>三个页面各管一件事</h2>
+  <div class="three">
+    <div><h3>发现</h3><p class="body">个人足迹做成按年月排列的横向卡片，没有个人记录时改为展示社区足迹；下面是周末短途和按地域分组的即将出发行程，点开是半屏详情卡。</p></div>
+    <div><h3>发布</h3><p class="body">分「周末就出发」和「好好计划一下」两种模式。长途 3 步：旅行风格 → 目的地、日期与天数 → 行程项目，顶部步骤条可以点击跳步。</p></div>
+    <div><h3>我的</h3><p class="body">已抵达的地点汇总统计；行程分「将要去」和「已抵达」两组，组内再分国内、国外；头像底色从调色板里自选，不用上传图片。</p></div>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <h2>实现上的几个取舍</h2>
+  <ul class="points">
+    <li><b>一套设计变量贯穿全局</b>：10 色调色板、目的地所在地域到色调的映射、共享样式类都写在全局样式里，页面样式全部复用同一套变量。</li>
+    <li><b>组件化</b>：自定义底部导航栏；行程详情做成可复用的半屏卡组件，首页和「我的」页共用。</li>
+    <li><b>数据层重构</b>：原先散在 6 处的全局数据直接赋值，收拢成统一经过一个数据层写入；本地存储和云数据库各做一个适配器，切换只改一行配置。这一版在本地开发分支上，尚未合并到线上仓库。</li>
+  </ul>
+</div></section>
+
+<div class="wrap"><footer><a href="../zhipin/">← 上一个：智聘</a><a href="../">返回作品集</a></footer></div>
+</body>
+</html>

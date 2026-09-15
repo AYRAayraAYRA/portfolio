@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>智聘 · 结构化招聘系统 | 蒋洋作品集</title>
+<meta name="description" content="智聘：从招聘需求审批到入职转正、升职调薪的结构化招聘系统，行业差异通过方案包配置。">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav"><a class="brand" href="../">蒋洋 · 作品集</a><a href="../ruotu/">下一个：若途 →</a></nav>
+
+  <header class="hero">
+    <p class="eyebrow">PROJECT 01 · 招聘管理</p>
+    <h1>智聘 · 结构化招聘系统</h1>
+    <p class="lead">从招聘需求审批到入职转正、升职调薪的一体化招聘系统。不同行业的差异通过「行业方案包」配置实现，而不是为每个行业各写一套代码。</p>
+    <div class="meta"><span><b>时间</b>　2026.09</span><span><b>角色</b>　个人项目：调研、产品设计与开发</span><span><b>技术</b>　Next.js · TypeScript · Prisma</span></div>
+    <p class="note">以下截图均来自本地运行的系统，内置一家制造企业的演示数据。</p>
+    <figure class="shot wide"><img src="../assets/zhipin/job-pipeline.jpg" alt="职位的候选人管道看板"><figcaption><b>职位管道</b>　按岗位的招聘流程分列，拖动卡片推进阶段；卡片上直接显示停留天数、渠道、面试评分。</figcaption></figure>
+  </header>
+</div>
+
+<section class="block"><div class="wrap">
+  <h2>先调研，再动工</h2>
+  <p class="body">动手前先梳理了招聘从需求到入职的全流程，并横向比较互联网、制造、零售、医疗四类行业在流程、必须收集的信息、评估方式和核心指标上的差异。结论是：流程骨架是通用的，差异集中在「配置」上。</p>
+  <ul class="points">
+    <li><b>通用引擎 + 配置层 + 行业方案包</b>：阶段名称可以自定义，阶段类型固定，保证不同流程之间的漏斗统计可比。</li>
+    <li><b>一个行业 = 一个方案包文件</b>：流程模板、评分卡、岗位模板与面试计划、自定义字段、证照类型、技能库、渠道、淘汰原因，初始化时一键导入。</li>
+    <li><b>同一套引擎，不同的流程</b>：制造业普工岗走「电话邀约 → 到厂面试 → 实操测试 → 入职体检」，互联网技术岗则是「简历筛选 → 编程测评 → 技术一面 → 技术二面 → HR 面 → 背景调查」。</li>
+  </ul>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <h2>一条完整的招聘链路</h2>
+  <div class="flow"><span>招聘需求审批</span><i>→</i><span>职位与人才库</span><i>→</i><span>结构化面试</span><i>→</i><span>Offer 审批</span><i>→</i><span>入职与转正</span><i>→</i><span>升职调薪</span></div>
+  <div class="two">
+    <figure class="shot"><img src="../assets/zhipin/requisition.jpg" alt="招聘需求审批" loading="lazy"><figcaption><b>招聘需求</b>　用人部门提交编制、薪资范围和到岗时间，审批通过后才生成职位。</figcaption></figure>
+    <figure class="shot"><img src="../assets/zhipin/import.jpg" alt="批量导入简历" loading="lazy"><figcaption><b>批量导入</b>　一次拖入多份简历，按文件名里的姓名和岗位自动归入对应岗位的人才池。</figcaption></figure>
+    <figure class="shot"><img src="../assets/zhipin/candidate-detail.jpg" alt="候选人详情" loading="lazy"><figcaption><b>候选人详情</b>　当前阶段、面试安排、评价汇总、行业字段和资质证照集中在一页，其余信息分组收起。</figcaption></figure>
+    <figure class="shot"><img src="../assets/zhipin/interview.jpg" alt="结构化面试评价" loading="lazy"><figcaption><b>结构化面试</b>　按评分卡的考察属性 1–4 分打分并给出录用建议，附推荐面试题。</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <h2>把管理规则写进系统</h2>
+  <p class="body">招聘里很多问题不是「没有工具」，而是规则只停留在口头上。这些规则被直接做成了系统行为：</p>
+  <ul class="points">
+    <li><b>独立评价</b>：面试官提交自己的评价之前，看不到同场其他面试官的意见，避免评分被第一个发言的人带偏。</li>
+    <li><b>先审批再招人</b>：招聘需求和 Offer 都要走审批；Offer 薪资超出职位预算时给出提示。</li>
+    <li><b>四类角色权限</b>：管理员、招聘专员、用人经理、面试官各自只看到该看的内容，所有操作限定在本企业范围内。</li>
+    <li><b>候选人信息合规</b>：记录个人信息授权与保留期限，以及资质证照的有效期。</li>
+    <li><b>停留提醒</b>：同一阶段停留超过 7 天的候选人自动进入「需要跟进」。</li>
+  </ul>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <h2>录用之后：人才发展</h2>
+  <p class="body">招聘不在发出 Offer 时结束。候选人被录用后自动建立员工档案，按生命周期往下走，每一步都有清单和记录。</p>
+  <div class="flow"><span>确认入职</span><i>→</i><span>入职清单</span><i>→</i><span>培训计划</span><i>→</i><span>转正评估（转正 / 延长 / 不予转正）</span><i>→</i><span>职级与调薪</span></div>
+  <div class="three">
+    <figure class="shot"><img src="../assets/zhipin/employee.jpg" alt="员工档案" loading="lazy"><figcaption><b>员工档案</b>　入职、培训、转正进度一目了然。</figcaption></figure>
+    <figure class="shot"><img src="../assets/zhipin/onboarding.jpg" alt="入职清单模板" loading="lazy"><figcaption><b>入职清单模板</b>　负责人与完成期限随行业方案包预置，可自行调整。</figcaption></figure>
+    <figure class="shot"><img src="../assets/zhipin/promotion.jpg" alt="职级与调薪设置" loading="lazy"><figcaption><b>职级与调薪</b>　职级序列与调薪幅度按绩效等级配置。</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <h2>数据与 AI 辅助</h2>
+  <figure class="shot wide"><img src="../assets/zhipin/insights.jpg" alt="招聘数据面板" loading="lazy"><figcaption><b>数据面板</b>　各职位在申请、面试、复试、HR 面的在途人数，按招聘流程分别统计的漏斗，以及各渠道的面试和录用转化。</figcaption></figure>
+  <ul class="points">
+    <li><b>AI 辅助但不依赖 AI</b>：简历解析、生成 JD、人岗匹配、推荐面试题、汇总面试评价；未配置模型时相关按钮自动隐藏，其余功能照常使用。</li>
+    <li><b>可切换模型</b>：管理员在页面里填写 API Key，可在 Claude 与 DeepSeek、通义千问、Kimi 等国内模型之间切换，也可以一键关闭 AI。</li>
+    <li><b>技术实现</b>：Next.js App Router、TypeScript、Tailwind CSS、Prisma（26 张数据表，SQLite，可换 PostgreSQL）。</li>
+  </ul>
+</div></section>
+
+<div class="wrap"><footer><a href="../">← 返回作品集</a><a href="../ruotu/">下一个：若途 · 结伴出行小程序 →</a></footer></div>
+</body>
+</html>
